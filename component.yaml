@@ -13,7 +13,7 @@ inputs:
   defaultValue: "$AC_APK_PATH"
   isRequired: true
   title: APK or AAB Path
-  description: "The full path of the build. Both APK($AC_APK_PATH) and AAB($AC_AAB_PATH) files are supported."
+  description: "The full path of the build. Both APK($AC_APK_PATH, $AC_SIGNED_APK_PATH) and AAB($AC_AAB_PATH, $AC_SIGNED_AAB_PATH) files are supported."
   helpText:
 - key: "AC_APPCENTER_OWNER"
   defaultValue: "$AC_APPCENTER_OWNER"
