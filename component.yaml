@@ -1,7 +1,7 @@
 platform: Android
 buildPlatform:
 displayName: App Center Android Distribute
-description: "Distribute APK, AAB, and mapping files to App Center."
+description: "⛔️ DEPRECATED - App Center was retired on 31 March 2025. Distribute APK, AAB, and mapping files to App Center."
 inputs:
 - key: "AC_APPCENTER_TOKEN"
   defaultValue: "$AC_APPCENTER_TOKEN"
