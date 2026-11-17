@@ -26,7 +26,9 @@ if `which appcenter`.empty?
   puts 'Installing Appcenter CLI'
   cli_version = get_env_variable('AC_APPCENTER_VERSION')
   cli_version = cli_version.nil? ? '' : "@#{cli_version}"
-  run_command("sudo npm install -g appcenter-cli#{cli_version}")
+  # Linux runners run as root and may have no sudo; the macOS runner needs it for a global install.
+  sudo = Process.uid.zero? ? '' : 'sudo '
+  run_command("#{sudo}npm install -g appcenter-cli#{cli_version}")
 end
 
 apk_path = env_has_key('AC_APPCENTER_APK_PATH')
